@@ -537,11 +537,6 @@ section{
 }
 
 /* Responsive: 2 columnas para pantallas más grandes */
-@media (min-width: 768px) {
-    .beneficios-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 
 
@@ -674,11 +669,6 @@ section{
     font-size: 0.9rem;
 }
 
-@media (min-width: 768px) {
-    .comentarios-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 
 /* Cards y contenido */
@@ -903,6 +893,7 @@ section{
 
 /* Responsive */
 @media (max-width: 768px) {
+
     .footer-container {
         text-align: center;
     }
@@ -911,3 +902,16 @@ section{
         display: inline-block;
     }
 }
+
+@media (min-width: 768px) {
+    .beneficios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .comentarios-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .comentarios-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+

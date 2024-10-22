@@ -345,7 +345,7 @@ section{
 }
 
 .section-galeria .galeria-fotoGrande-content{
-    background-image: url(/IMG/fondo-electricista.png);
+    background-image: url(img/fondo-electricista.png);
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -471,7 +471,7 @@ section{
 /* section beneficios */
 
 .section-beneficios {
-    background-image: url(/IMG/imagen-reparacion-bobina.jpg);
+    background-image: url(img/imagen-reparacion-bobina.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0rem 0rem;

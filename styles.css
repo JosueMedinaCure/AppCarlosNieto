@@ -915,3 +915,27 @@ section{
     }
 }
 
+@media only screen and (min-width: 300px) and (max-width: 576px) {
+
+    
+
+.section{
+       width: auto;    
+}
+.section-inicio{
+    padding-left: 0;
+}
+.section h2{
+    font-size: 2.1rem;
+}
+.section p{
+    font-size: 1rem;
+}
+.section-inicio .contacts a{
+    width: 25px;
+}
+button{
+    padding: 1em 1em;
+    font-size: 0.6rem;
+}
+}

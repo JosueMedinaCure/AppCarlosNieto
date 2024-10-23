@@ -965,11 +965,16 @@ section{
 @media (max-width: 576px) {
 
 .section{
-       width: auto;    
+       width: auto;
+       padding: .2rem;    
 }
 .section-inicio{
     padding-left: 0;
 }
+.section1{
+    flex-direction: column-reverse;
+}
+
 .section h2{
     font-size: 2.1rem;
 }
@@ -996,9 +1001,31 @@ button{
     width: auto;
 }
 
+.sobre-mi-content img {
+    width: 200px;
+    height: 200px;
+}
+
+.certificados{
+    flex-direction: column;
+}
+
+.footer{
+    flex-direction: column;
+}
+
+.footer-container{
+    flex-direction: column;
+}
+
+.section-galeria .imagenes{
+flex-direction: column;
+}
 
 
-
+ .carrusel-controles{
+    display: none;
+ }
 
 }
 

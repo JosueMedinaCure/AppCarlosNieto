@@ -391,7 +391,7 @@ section{
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    height: 70vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -435,7 +435,7 @@ section{
 .section-galeria .imagenes{
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-evenly;
     width: 100%;
     transition: .8s;

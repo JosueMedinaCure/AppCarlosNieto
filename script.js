@@ -39,11 +39,18 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 });
 
 
+function startCarousel() {
+    if (!isMobileDevice()) {
+        // Código para mover automáticamente el carrusel
+        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
+    }
+}
 
 // Detectar si el dispositivo es móvil
 function isMobileDevice() {
     window.innerWidth <= 768;
     const aosLink = document.getElementById('AOS_ANIMATION');
+    
     
     if (window.innerWidth < 768) {
         clearInterval(autoSlideInterval); // Detiene el carrusel

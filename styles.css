@@ -310,7 +310,6 @@ section{
 
 .section-inicio .contacts{
     max-width: 430px;
-    height: 30px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -998,6 +997,7 @@ section{
 .section-inicio{
     padding-left: 0;
     font-weight: bold;
+    height: auto;
 }
 .section-inicio .buttons{
     display: flex;
@@ -1007,6 +1007,10 @@ section{
 
 .section1{
     flex-direction: column-reverse;
+}
+.section1 img{
+    width: 300px;
+    height: 300px;
 }
 
 .section h2{

@@ -1020,6 +1020,12 @@ section{
 .section p{
     font-size: 1rem;
 }
+
+.section-inicio button {
+    
+    margin: .2rem;
+}
+
 .section-inicio .contacts a{
     width: 25px;
     margin: 1rem;

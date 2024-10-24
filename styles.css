@@ -988,7 +988,9 @@ section{
     }    
 }
 
-@media (max-width: 576px) {
+
+
+@media (max-width: 480px) {
 
 .section{
        width: auto;
@@ -1015,10 +1017,10 @@ section{
 }
 
 .section h2{
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 .section p{
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .section-inicio button {
@@ -1095,3 +1097,14 @@ flex-direction: column;
 }
 
 
+
+@media (max-width: 320px){
+
+    .section h2{
+        font-size: 1.5rem;
+    }
+    .section p{
+        font-size: .7rem;
+    }
+
+}

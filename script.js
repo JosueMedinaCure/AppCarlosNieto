@@ -60,3 +60,48 @@ function isMobileDevice() {
 }
 
 isMobileDevice()
+
+
+
+/* menu lateral */
+
+
+// Seleccionar el checkbox y la capa que oscurece el contenido
+// Seleccionar el checkbox, la capa y el menú
+const btnMenu = document.getElementById('btn-menu');
+const capa = document.querySelector('.capa');
+const containerMenu = document.querySelector('.container-menu');
+const menuLinks = document.querySelectorAll('.cont-menu nav a');
+
+// Detectar cambios en el checkbox del menú
+btnMenu.addEventListener('change', function() {
+    if (btnMenu.checked) {
+        // Mostrar el menú lateral y la capa oscura cuando se activa el menú
+        containerMenu.style.visibility = 'visible';
+        containerMenu.style.opacity = '1';
+        capa.style.display = 'block';  // Mostrar la capa oscura
+    } else {
+        // Ocultar el menú lateral y la capa oscura cuando se desactiva el menú
+        containerMenu.style.visibility = 'hidden';
+        containerMenu.style.opacity = '0';
+        capa.style.display = 'none';  // Ocultar la capa oscura
+    }
+});
+
+// Cerrar el menú si el usuario hace clic fuera de él (en la capa oscura)
+capa.addEventListener('click', function() {
+    btnMenu.checked = false;  // Desactivar el checkbox
+    containerMenu.style.visibility = 'hidden';
+    containerMenu.style.opacity = '0';
+    capa.style.display = 'none';  // Ocultar la capa oscura
+});
+
+// Cerrar el menú si se hace clic en un enlace del menú lateral
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        btnMenu.checked = false;  // Desactivar el checkbox
+        containerMenu.style.visibility = 'hidden';
+        containerMenu.style.opacity = '0';
+        capa.style.display = 'none';  // Ocultar la capa oscura
+    });
+});

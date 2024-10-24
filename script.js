@@ -4,6 +4,7 @@ const totalSlides = document.querySelectorAll('.imagenes .card').length;
 
 
 
+
 // Mover el carrusel en la dirección dada (1 adelante, -1 atrás)
 function moveSlide(direction) {
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
@@ -42,9 +43,11 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 // Detectar si el dispositivo es móvil
 function isMobileDevice() {
     window.innerWidth <= 768;
+    const aosLink = document.getElementById('AOS_ANIMATION');
     
     if (window.innerWidth < 768) {
         clearInterval(autoSlideInterval); // Detiene el carrusel
+        aosLink.remove();
     
     } else { // Detiene el carrusel
         startCarousel()    

@@ -157,9 +157,6 @@ body {
 section{
     scroll-snap-align: center;
     transition: .3s;
-}
-
-.section {
     padding: 3rem 2rem;
     text-align: center;
     width: 1200px;
@@ -167,6 +164,8 @@ section{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+
+
 
 .section h1, .section h2 {
     font-size: 4rem;
@@ -187,7 +186,6 @@ section{
     background-position: center;
     border-radius: 20px;
     width: 1400px;
-    margin-top: 0;
 }
 .section-inicio::before{
     content: "";
@@ -1026,6 +1024,12 @@ flex-direction: column;
  .carrusel-controles{
     display: none;
  }
+
+
+ .whats-link {
+    left: 80%;
+    width: 50px;
+}
 
 }
 

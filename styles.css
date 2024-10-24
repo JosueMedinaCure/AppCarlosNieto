@@ -843,7 +843,7 @@ section{
 
 .whats-link{
     position: fixed;
-    top: 80%;
+    top: 90%;
     left: 93%;
     width: 80px;
     height: 80px;
@@ -991,22 +991,6 @@ section{
     }
 }
 
-@media (min-width: 768px) {
-    .beneficios-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .comentarios-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .comentarios-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .btn-menu{
-        visibility: visible;
-        position: relative;
-    }    
-}
 
 
 
@@ -1117,7 +1101,7 @@ flex-direction: column;
 
  .whats-link {
     left: 80%;
-    width: 50px;
+    width: 40px;
 }
 
 }

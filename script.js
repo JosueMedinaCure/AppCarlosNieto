@@ -26,7 +26,7 @@ let autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
 function restartAutoSlide(direction) {
     clearInterval(autoSlideInterval); // Detener el desplazamiento automático
     moveSlide(direction);             // Mover el carrusel manualmente
-    autoSlideInterval = setInterval(autoSlide, 1000); // Reiniciar el desplazamiento automático
+    autoSlideInterval = setInterval(autoSlide, 6000); // Reiniciar el desplazamiento automático
 }
 
 // Eventos de clic en los botones de navegación
@@ -39,17 +39,10 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 });
 
 
-function startCarousel() {
-    if (!isMobileDevice()) {
-        // Código para mover automáticamente el carrusel
-        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
-    }
-}
 
 // Detectar si el dispositivo es móvil
 function isMobileDevice() {
     window.innerWidth <= 768;
-    const aosLink = document.getElementById('AOS_ANIMATION');
     
     if (window.innerWidth < 768) {
         clearInterval(autoSlideInterval); // Detiene el carrusel
@@ -60,6 +53,14 @@ function isMobileDevice() {
 }
 
 isMobileDevice()
+
+
+function startCarousel() {
+    if (!isMobileDevice()) {
+        // Código para mover automáticamente el carrusel
+        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
+    }
+}
 
 
 

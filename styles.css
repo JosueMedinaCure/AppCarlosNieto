@@ -1072,7 +1072,7 @@ flex-direction: column;
 }
 
 .section-galeria .galeria-fotoGrande-content{
-        border-radius: 0;
+        padding: 1rem;
     }
 
 

@@ -71,7 +71,7 @@ button {
     transform: translateY(-1px);
   }
 
-  span{
+  .span-blue{
     color: var(--blueButtons);
     font-weight: 600;
 }
@@ -97,7 +97,6 @@ button {
     transition: all 0.3s ease;
 }
 .container{
-    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
@@ -231,7 +230,6 @@ section{
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
-    width: 1400px;
 }
 .section-inicio::before{
     content: "";
@@ -633,7 +631,7 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    text-align: left;
+    text-align: justify;
 }
 
 .sobre-mi-content{
@@ -645,6 +643,7 @@ section{
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    margin-left: 25px;
 }
 
 .section-sobre-mi h2{
@@ -665,6 +664,7 @@ section{
 .certificados{
     display: flex;
     align-items: end;
+    flex-wrap: wrap;
 }
 
 .certificados img{
@@ -843,8 +843,8 @@ section{
 
 .whats-link{
     position: fixed;
-    top: 90%;
-    left: 93%;
+    top: 80%;
+    left: 90%;
     width: 80px;
     height: 80px;
     transition: .2s;
@@ -980,7 +980,10 @@ section{
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+
+@media (max-width: 800px) {
+
 
     .footer-container {
         text-align: center;
@@ -989,12 +992,6 @@ section{
     .footer-nav ul {
         display: inline-block;
     }
-}
-
-
-
-
-@media (max-width: 480px) {
 
 .section{
        width: auto;
@@ -1117,4 +1114,27 @@ flex-direction: column;
         font-size: .7rem;
     }
 
+}
+
+
+@media only screen and (min-width: 580px) and (max-width: 1200px) {
+    
+.section h2{
+    font-size: 3rem;
+}
+.section p{
+    font-size: 1.5rem;
+}
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1200px){
+    .section-inicio{
+        width: 800PX;
+    }
+ .section{
+    width: 800px;
+ }
 }

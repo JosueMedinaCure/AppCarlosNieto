@@ -1,17 +1,13 @@
 let currentSlide = 0;
 const carousel = document.querySelector('.imagenes');
 const totalSlides = document.querySelectorAll('.imagenes .card').length;
-
-
-
+let autoSlideInterval;
 
 // Mover el carrusel en la dirección dada (1 adelante, -1 atrás)
 function moveSlide(direction) {
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     const offset = -currentSlide * 35; // Ajuste basado en el 35% del tamaño de las imágenes
-carousel.style.transform = `translateX(${offset}%)`;
-
-
+    carousel.style.transform = `translateX(${offset}%)`;
 }
 
 // Desplazamiento automático
@@ -20,13 +16,36 @@ function autoSlide() {
 }
 
 // Iniciar desplazamiento automático
-let autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
+function startCarousel() {
+    if (!isMobileDevice()) {
+        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 6 segundos
+    }
+}
+
+// Detectar si el dispositivo es móvil
+function isMobileDevice() {
+    return window.innerWidth <= 768;  // Devuelve true si la pantalla es menor o igual a 768px
+}
+
+// Detener el carrusel en dispositivos móviles
+function checkDeviceAndStopCarousel() {
+    if (isMobileDevice()) {
+        clearInterval(autoSlideInterval); // Detener el carrusel
+    } else {
+        startCarousel(); // Iniciar el carrusel solo si no es móvil
+    }
+}
+
+// Ejecutar al cargar la página
+checkDeviceAndStopCarousel();
 
 // Reiniciar el carrusel cuando se hace clic en un botón
 function restartAutoSlide(direction) {
     clearInterval(autoSlideInterval); // Detener el desplazamiento automático
     moveSlide(direction);             // Mover el carrusel manualmente
-    autoSlideInterval = setInterval(autoSlide, 6000); // Reiniciar el desplazamiento automático
+    if (!isMobileDevice()) {
+        autoSlideInterval = setInterval(autoSlide, 6000); // Reiniciar el desplazamiento automático
+    }
 }
 
 // Eventos de clic en los botones de navegación
@@ -38,36 +57,12 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     restartAutoSlide(1); // Mover hacia adelante
 });
 
+// Verificar si el tamaño de la ventana cambia (responsiveness)
+window.addEventListener('resize', checkDeviceAndStopCarousel);
 
 
-// Detectar si el dispositivo es móvil
-function isMobileDevice() {
-    window.innerWidth <= 768;
-    
-    if (window.innerWidth < 768) {
-        clearInterval(autoSlideInterval); // Detiene el carrusel
-    
-    } else { // Detiene el carrusel
-        startCarousel()    
-    }// Puedes ajustar el ancho de acuerdo a lo que consideres un "dispositivo móvil"
-}
+/* Menú lateral */
 
-isMobileDevice()
-
-
-function startCarousel() {
-    if (!isMobileDevice()) {
-        // Código para mover automáticamente el carrusel
-        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 3 segundos
-    }
-}
-
-
-
-/* menu lateral */
-
-
-// Seleccionar el checkbox y la capa que oscurece el contenido
 // Seleccionar el checkbox, la capa y el menú
 const btnMenu = document.getElementById('btn-menu');
 const capa = document.querySelector('.capa');
@@ -77,12 +72,10 @@ const menuLinks = document.querySelectorAll('.cont-menu nav a');
 // Detectar cambios en el checkbox del menú
 btnMenu.addEventListener('change', function() {
     if (btnMenu.checked) {
-        // Mostrar el menú lateral y la capa oscura cuando se activa el menú
         containerMenu.style.visibility = 'visible';
         containerMenu.style.opacity = '1';
         capa.style.display = 'block';  // Mostrar la capa oscura
     } else {
-        // Ocultar el menú lateral y la capa oscura cuando se desactiva el menú
         containerMenu.style.visibility = 'hidden';
         containerMenu.style.opacity = '0';
         capa.style.display = 'none';  // Ocultar la capa oscura

@@ -380,7 +380,6 @@ section{
 
 
 /* section-servicios */
-
 .section-servicios {
     background-color: #F4F4F9;
     color: #333;
@@ -456,22 +455,20 @@ section{
  font-size: 1.3rem;
 }
 
+.section-galeria h4{
+    font-size: 2.5rem;
+}
+
+.section-galeria h5{
+ font-size: 2rem;
+}
+
 .section-galeria p{
     font-size: 1.1rem;
 }
 
 
-.section-galeria img{
-    background-size: cover;
-    height: 70dvh;
-    width: 100%;
-}
-.section-galeria .imagenes img{
-    background-size: cover;
-    width: 250px;
-    height: 200px;
-    width: 100%;
-}
+
 
 .section-galeria .imagenes{
     display: flex;
@@ -509,10 +506,11 @@ section{
         color: #000000;
         padding: 2.5rem;
         border-radius: 20px;
-        min-width: 35%;
+        min-width: 100%;
         max-width: 400px;
         text-align: left;
-        
+        display: flex;
+        flex-direction: row-reverse;
     box-shadow: none;
     
 }
@@ -521,11 +519,15 @@ section{
 .section-galeria .card img{
     color: #000000;
     border-radius: 12px;
-    width: 100%;
+    width: 50%;
     text-align: left;
+    height: 300px;
 
 }
 
+.section-galeria .card-content{
+    width: 100%;
+}
 
 
    
@@ -550,6 +552,71 @@ section{
     background-color: white;
     color: #000;
 }
+
+
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Asegurar que esté por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Activar desplazamiento si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 15% desde el top y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 1000px;
+    height: auto; /* Ancho máximo */
+}
+
+.card-modal{
+    color: #000000;
+    padding: 2.5rem;
+    border-radius: 20px;
+    min-width: 100%;
+    max-width: 400px;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: none;
+}
+
+.card-modal img{
+    color: #000000;
+    border-radius: 12px;
+    width: 30%;
+    text-align: left;
+    height: 220px;
+}
+
+
+.modal-title{
+    padding: 2rem;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
 /* section beneficios */
 

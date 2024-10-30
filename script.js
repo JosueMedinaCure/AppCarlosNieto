@@ -1,64 +1,35 @@
 let currentSlide = 0;
-const carousel = document.querySelector('.imagenes');
-const totalSlides = document.querySelectorAll('.imagenes .card').length;
-let autoSlideInterval;
+const carousel = document.querySelector('.imagenes'); // Asegúrate de que la clase sea correcta
+const totalSlides = document.querySelectorAll('.imagenes .card').length; // Cambiado a '.card'
 
 // Mover el carrusel en la dirección dada (1 adelante, -1 atrás)
 function moveSlide(direction) {
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    const offset = -currentSlide * 35; // Ajuste basado en el 35% del tamaño de las imágenes
+    const offset = -currentSlide * 100; // Ajuste basado en el tamaño de las imágenes
     carousel.style.transform = `translateX(${offset}%)`;
+    carousel.style.transition = 'transform 0.5s ease-in-out'; // Transición suave
 }
 
-// Desplazamiento automático
-function autoSlide() {
-    moveSlide(1);
-}
-
-// Iniciar desplazamiento automático
-function startCarousel() {
-    if (!isMobileDevice()) {
-        autoSlideInterval = setInterval(autoSlide, 6000); // Cambia cada 6 segundos
-    }
-}
-
-// Detectar si el dispositivo es móvil
-function isMobileDevice() {
-    return window.innerWidth <= 768;  // Devuelve true si la pantalla es menor o igual a 768px
-}
-
-// Detener el carrusel en dispositivos móviles
-function checkDeviceAndStopCarousel() {
-    if (isMobileDevice()) {
-        clearInterval(autoSlideInterval); // Detener el carrusel
-    } else {
-        startCarousel(); // Iniciar el carrusel solo si no es móvil
-    }
-}
-
-// Ejecutar al cargar la página
-checkDeviceAndStopCarousel();
-
-// Reiniciar el carrusel cuando se hace clic en un botón
-function restartAutoSlide(direction) {
-    clearInterval(autoSlideInterval); // Detener el desplazamiento automático
-    moveSlide(direction);             // Mover el carrusel manualmente
-    if (!isMobileDevice()) {
-        autoSlideInterval = setInterval(autoSlide, 6000); // Reiniciar el desplazamiento automático
+// Reiniciar la posición del carrusel cuando la pantalla es menor a 900px
+function resetCarouselPosition() {
+    if (window.innerWidth < 900) {
+        currentSlide = 0; // Reiniciar a la primera imagen
+        carousel.style.transform = 'translateX(0%)'; // Llevar a la posición inicial
+        carousel.style.transition = 'none'; // Sin transición para el reset
     }
 }
 
 // Eventos de clic en los botones de navegación
 document.getElementById('prevBtn').addEventListener('click', () => {
-    restartAutoSlide(-1); // Mover hacia atrás
+    moveSlide(-1); // Mover hacia atrás
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
-    restartAutoSlide(1); // Mover hacia adelante
+    moveSlide(1); // Mover hacia adelante
 });
 
-// Verificar si el tamaño de la ventana cambia (responsiveness)
-window.addEventListener('resize', checkDeviceAndStopCarousel);
+// Detectar el cambio de tamaño de la ventana
+window.addEventListener('resize', resetCarouselPosition);
 
 
 /* Menú lateral */
@@ -99,3 +70,35 @@ menuLinks.forEach(link => {
         capa.style.display = 'none';  // Ocultar la capa oscura
     });
 });
+
+
+
+
+// Selecciona todos los elementos con la clase "openModal"
+const openModalButtons = document.querySelectorAll('.openModal');
+const modal = document.getElementById('myModal');
+const closeModal = document.querySelector('.close');
+
+// Agrega un evento click a cada botón para abrir el modal
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        document.body.style.overflowY = 'hidden';
+    });
+});
+
+// Cerrar el modal cuando se hace clic en el botón de cierre
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflowY = 'visible';
+});
+
+// Cerrar el modal si se hace clic fuera de la ventana de contenido
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflowY = 'visible';
+    }
+});
+
+

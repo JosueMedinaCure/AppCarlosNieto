@@ -1281,4 +1281,9 @@ flex-direction: column;
  .section-galeria .card {
     flex-direction: column;
 }
+
+.card-modal {
+    flex-direction: column;
+    padding: 0;
+}
 }

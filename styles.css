@@ -1277,4 +1277,8 @@ flex-direction: column;
  .section{
     width: 800px;
  }
+
+ .section-galeria .card {
+    flex-direction: column;
+}
 }

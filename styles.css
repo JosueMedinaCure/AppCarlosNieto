@@ -1123,8 +1123,8 @@ section{
     flex-direction: column-reverse;
 }
 .section1 img{
-    width: 300px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
 }
 
 .section h2{
@@ -1196,6 +1196,22 @@ flex-direction: column;
         padding: 1rem;
     }
 
+.section-galeria .card{
+    flex-direction: column;
+}
+
+.section-galeria .card img{
+    width: 100%;
+}
+
+.card-modal{
+    flex-direction: column;
+    padding: 0;
+}
+.card-modal img{
+    width: 100%;
+}
+
     .sobre-mi-content{
         flex-direction: column-reverse;
         align-items: center;
@@ -1209,6 +1225,20 @@ flex-direction: column;
  .whats-link {
     left: 80%;
     width: 40px;
+}
+
+.div-cientes{
+    height: auto;
+    margin: auto;
+}
+
+.div-cientes img{
+    width: 100px;
+    height: auto;
+}
+
+#modalImage{
+    width: 80%;
 }
 
 }

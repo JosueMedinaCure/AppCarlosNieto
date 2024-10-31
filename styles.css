@@ -129,6 +129,7 @@ button {
     border-bottom: 2px solid transparent;
     font-size: 15px;
     margin-right: 5px;
+    font-weight: bold;
 }
 .container .menu a:hover{
     border-bottom: 2px solid var(--blueButtons);
@@ -245,7 +246,7 @@ section{
 
 
 .section-galeria {
-    color: #333;
+    color: #000000;
 }
 
 .section-beneficios {
@@ -540,7 +541,7 @@ section{
 }
 
 .carrusel-controles button {
-    background-color: var(--blueButtons);
+    background-color: #11646ffb;
     border: none;
     color: white;
     padding: 7px 15px;
@@ -565,6 +566,7 @@ section{
     overflow: auto; /* Activar desplazamiento si es necesario */
     background-color: rgb(0,0,0); /* Color de fondo */
     background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+   
 }
 
 .modal-content {
@@ -575,6 +577,7 @@ section{
     width: 80%; /* Ancho del modal */
     max-width: 1000px;
     height: auto; /* Ancho máximo */
+    
 }
 
 .card-modal{
@@ -587,6 +590,7 @@ section{
     display: flex;
     flex-direction: row-reverse;
     box-shadow: none;
+    align-items: center;
 }
 
 .card-modal img{
@@ -595,11 +599,16 @@ section{
     width: 30%;
     text-align: left;
     height: 220px;
+    margin-left:1rem ;
 }
 
+.card-modal p{
+    text-align: justify;
+}
 
 .modal-title{
     padding: 2rem;
+    color: var(--blueButtons);
 }
 
 .close {
@@ -617,6 +626,24 @@ section{
 }
 
 
+
+
+.div-cientes{
+    width: auto;
+    height: 100px;
+    margin: 2rem;
+}
+.div-cientes img{
+    width: 150px;
+    height: 100px;
+}
+
+.clientes-imgs{
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+}
 
 /* section beneficios */
 
@@ -737,8 +764,7 @@ section{
 .certificados img{
     max-width: 250px;
     width: 215px;
-    height: 150px;
-    border-radius: none;
+    height: 300px;
     cursor: pointer;
     border-radius: 10px;
     transition: .2s;
@@ -758,6 +784,23 @@ section{
   }
 
 
+  #modalImage{
+    width: 30%;
+  }
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* sectinon-contacto */
 
 

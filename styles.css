@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 
 
@@ -35,7 +35,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Bree Serif", serif;
     line-height: 1.2;
     background-color: #ffffff;
     color: #333;
@@ -296,6 +296,9 @@ section{
     margin-bottom: 15px;
     color: white;
 }
+.section-inicio h2, .section-inicio span{
+    font-family: "Archivo Black", serif;
+}
 
 
 .section-inicio p{
@@ -450,6 +453,7 @@ section{
 
 .section-galeria h1{
     color: white;
+    font-family: "Archivo Black", serif;
 }
 
 .section-galeria h2{
@@ -695,6 +699,7 @@ section{
 
 
 .section-beneficios h2 {
+    font-family: "Archivo Black", serif;
     text-align: left;
     padding: 3rem 2rem 0;
     font-size: 3rem;
@@ -932,6 +937,9 @@ section{
     font-size: 2rem;
     font-weight: 500;
     color: #000000;
+    font-family: "Archivo Black", serif;
+  font-weight: 400;
+  font-style: normal;
    }
    
    /*Buttons*/

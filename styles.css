@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Archivo+Black&family=Bree+Serif&family=Copse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 
 
@@ -35,11 +34,15 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    font-family: "Bree Serif", serif;
+    font-family: "DM Sans", serif;
     line-height: 1.2;
     background-color: #ffffff;
     color: #333;
     scroll-snap-type: mandatory;
+}
+
+h1, h2, h3,span {
+    font-family: "Archivo Black", serif;
 }
 
 
@@ -296,9 +299,7 @@ section{
     margin-bottom: 15px;
     color: white;
 }
-.section-inicio h2, .section-inicio span{
-    font-family: "Archivo Black", serif;
-}
+
 
 
 .section-inicio p{
@@ -453,7 +454,6 @@ section{
 
 .section-galeria h1{
     color: white;
-    font-family: "Archivo Black", serif;
 }
 
 .section-galeria h2{

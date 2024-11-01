@@ -365,7 +365,7 @@ section{
     border-radius: 30px;
 }
 
-.section1 h1{
+.section1 h2{
     font-size: 3rem;
 }
 
@@ -448,8 +448,12 @@ section{
     color: white;
 }
 
+.section-galeria h1{
+    color: white;
+}
+
 .section-galeria h2{
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .section-galeria h3{

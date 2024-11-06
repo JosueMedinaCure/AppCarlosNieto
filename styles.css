@@ -1222,6 +1222,9 @@ button{
 .section-galeria{
     border-radius: 0;
 }
+.section-galeria h2{
+    font-size: 1.5rem;
+}
 
 .section-galeria .imagenes{
 flex-direction: column;

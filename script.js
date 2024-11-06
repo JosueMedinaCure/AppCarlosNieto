@@ -62,25 +62,42 @@ menuLinks.forEach(link => {
 const openModalButtons = document.querySelectorAll('.openModal');
 const modal = document.getElementById('myModal');
 const closeModal = document.querySelector('.close');
+const ImageLUZ = document.getElementById('imagenLUZ');
+const imagenLUZMODAL = document.getElementById("imagenLUZMODAL");
 
+// Mostrar imagen al hacer clic en imagenLUZMODAL
+imagenLUZMODAL.addEventListener('click', () => {
+    document.body.style.overflowY = 'hidden';
+    ImageLUZ.style.display = "flex";
+});
+
+// Abrir modal al hacer clic en los botones con clase "openModal"
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         modal.style.display = 'flex';
-        document.body.style.overflowY = 'hidden';
+        
     });
 });
 
+// Cerrar modal al hacer clic en la "X"
 closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflowY = 'visible';
+    cerrarModal();
 });
 
+// Cerrar modal y ImageLUZ al hacer clic fuera del modal
 window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflowY = 'visible';
+    // Verifica si se hizo clic en el fondo del modal (no en la imagen)
+    if (event.target === modal || event.target === ImageLUZ) {
+        cerrarModal();
     }
 });
+
+// Función para cerrar el modal y ocultar la imagen
+function cerrarModal() {
+    modal.style.display = 'none';
+    ImageLUZ.style.display = "none";
+    document.body.style.overflowY = 'visible';
+}
 
 // Modal de imágenes
 const modalimg = document.getElementById("imageModal");

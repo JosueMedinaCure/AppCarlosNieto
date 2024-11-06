@@ -534,6 +534,25 @@ section{
 
 }
 
+#imagenLUZ .modal-content img{
+    width: 30%;
+    align-content: center;
+    height: 300px;
+
+}
+
+#imagenLUZ .modal-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#imagenLUZMODAL:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: .2s;
+}
+
+
 .section-galeria .card-content{
     width: 100%;
 }
@@ -585,6 +604,7 @@ section{
     width: 80%; /* Ancho del modal */
     max-width: 1000px;
     height: auto; /* Ancho máximo */
+    border-radius: 20px;
     
 }
 

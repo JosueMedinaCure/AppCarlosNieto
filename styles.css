@@ -41,7 +41,7 @@ body {
     scroll-snap-type: mandatory;
 }
 
-h1, h2, h3,span {
+h1, h2, h3, h4,span {
     font-family: "Archivo Black", serif;
 }
 
@@ -457,7 +457,7 @@ section{
 }
 
 .section-galeria h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .section-galeria h3{

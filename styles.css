@@ -544,6 +544,7 @@ section{
 #imagenLUZ .modal-content{
     display: flex;
     justify-content: space-evenly;
+    margin: auto;
 }
 
 #imagenLUZMODAL:hover{
@@ -601,7 +602,7 @@ section{
     margin: auto; /* 15% desde el top y centrado */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
+    width: 90%; /* Ancho del modal */
     max-width: 1000px;
     height: auto; /* Ancho máximo */
     border-radius: 20px;
@@ -1277,6 +1278,15 @@ flex-direction: column;
 
 #modalImage{
     width: 80%;
+}
+#imagenLUZ .modal-content{
+    flex-direction: column;
+    justify-content: normal;
+}
+
+#imagenLUZ .modal-content img{
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 }

@@ -69,13 +69,14 @@ const imagenLUZMODAL = document.getElementById("imagenLUZMODAL");
 imagenLUZMODAL.addEventListener('click', () => {
     document.body.style.overflowY = 'hidden';
     ImageLUZ.style.display = "flex";
+    
 });
 
 // Abrir modal al hacer clic en los botones con clase "openModal"
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
         modal.style.display = 'flex';
-        
+        document.body.style.overflowY = 'hidden';
     });
 });
 
